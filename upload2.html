@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>测试 预览上传</title>
+<link rel="stylesheet" href="hpUpload/css/hpUpload.css">
+
+<script src="jquery.min.js"></script>
+<script src="layer/layer.js"></script>
+<script src="hpUpload/hpUpload.js"></script>
+</head>
+<body>
+
+	<div class="hp-upload-div" id="imgsUrlDiv"></div>
+
+	<hr/>
+
+	
+
+	<script type="text/javascript">
+
+
+	    // 预览上传
+	    var url="/hpUpload/common/upload/uploadFiles.jhtml"; // 提交目标地址
+	    var data={"path" : "upload/headImg"};
+	    $.hpUpload_plus.viewUpload(url,data,function(json){
+	    	           // 上传完成之后
+	    			  layer.msg('上传成功1')
+				      console.log(json)
+	    });
+	
+      //         
+
+
+	</script>
+</body>
+</html>
